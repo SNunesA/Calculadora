@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <title>Calculadora</title>
-    <link href="style.css" rel="stylesheet">
-</head>
-<body> 
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
     <div>
-        <form action="/action_page.php">
-            <input type="number" value="0"><br>
-        </form> 
-        <form action="/action_page.php">
-            <input type="reset" value="C">
-            <input type="button" value="+">
-            <input type="button" value="-">
-            <input type="button" value="x">
-            <input type="button" value="&#247;">
-            <input type="button" value="&#94;">
-            <input type="submit" value="=">
-        </form>
-        <form action="/action_page.php">
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <input type="button" value="6">
-            <input type="button" value="7">
-            <input type="button" value="8">
-            <input type="button" value="9">
-            <input type="button" value="10">
-        </form>
+      <div>
+        <input type="text" value="" id="calculo" />
+        <br />
+      </div>
+      <div>
+        <button onclick="limpar()">C</button>
+
+        <!-- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators -->
+        <button onclick="adicionarValor('+')">+</button>
+        <button onclick="adicionarValor('-')">-</button>
+        <button onclick="adicionarValor('*')">x</button>
+        <button onclick="adicionarValor('/')">&#247;</button>
+        <button onclick="adicionarValor('**')">&#94;</button>
+
+        <button onclick="calcular()">=</button>
+      </div>
+      <div>
+        <button onclick="adicionarValor('0')">0</button>
+        <button onclick="adicionarValor('1')">1</button>
+        <button onclick="adicionarValor('2')">2</button>
+        <button onclick="adicionarValor('3')">3</button>
+        <button onclick="adicionarValor('4')">4</button>
+        <button onclick="adicionarValor('5')">5</button>
+        <button onclick="adicionarValor('6')">6</button>
+        <button onclick="adicionarValor('7')">7</button>
+        <button onclick="adicionarValor('8')">8</button>
+        <button onclick="adicionarValor('9')">9</button>
+      </div>
     </div>
     <script src="calculadora.js"></script>
-</body>
+  </body>
 </html>
