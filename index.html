@@ -10,40 +10,53 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="shotcut icon" href="calculator.png" />
     <title>Calculadora</title>
+    <!-- Referencia ao CSS -->
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <div>
-      <div>
-        <input type="text" value="" id="calculo" />
-        <br />
-      </div>
-      <div>
-        <button onclick="limpar()">C</button>
+    <!-- Container da calculadora -->
+    <div class="container">
+      <img src="image.jpg" class="imagem"/>
+      <div class="calculadora">
+        <h5>Calculadora</h5>
+        <div>
+          <!-- tela da calculadora onde aparece os calculos -->
+          <!-- placeholder deixa o 0 no input quando nao tem nada digitado -->
+          <!-- readonly é para que o usuario nao escreva pelo teclado -->
+          <input type="text" value="" id="calculo" placeholder="0" readonly />
+        </div>
+        <div class="operadores">
+          <!-- Botoes dos simbolos -->
+          <button onclick="limpar()">C</button>
+          <!-- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators -->
+          <button onclick="adicionarValor('+')">+</button>
+          <button onclick="adicionarValor('-')">-</button>
+          <button onclick="adicionarValor('*')">x</button>
+          <button onclick="adicionarValor('/')">&#247;</button>
+          <button onclick="adicionarValor('**')">&#94;</button>
 
-        <!-- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators -->
-        <button onclick="adicionarValor('+')">+</button>
-        <button onclick="adicionarValor('-')">-</button>
-        <button onclick="adicionarValor('*')">x</button>
-        <button onclick="adicionarValor('/')">&#247;</button>
-        <button onclick="adicionarValor('**')">&#94;</button>
-
-        <button onclick="calcular()">=</button>
-      </div>
-      <div>
-        <button onclick="adicionarValor('0')">0</button>
-        <button onclick="adicionarValor('1')">1</button>
-        <button onclick="adicionarValor('2')">2</button>
-        <button onclick="adicionarValor('3')">3</button>
-        <button onclick="adicionarValor('4')">4</button>
-        <button onclick="adicionarValor('5')">5</button>
-        <button onclick="adicionarValor('6')">6</button>
-        <button onclick="adicionarValor('7')">7</button>
-        <button onclick="adicionarValor('8')">8</button>
-        <button onclick="adicionarValor('9')">9</button>
+          <button onclick="calcular('=')"> =</button>
+          <button onclick="adicionarValor('.')">.</button>
+        </div>
+        <div class="numeros">
+          <!-- Botoes dos numeros e ponto -->
+          <button onclick="adicionarValor('1')">1</button>
+          <button onclick="adicionarValor('2')">2</button>
+          <button onclick="adicionarValor('3')">3</button>
+          <button onclick="adicionarValor('4')">4</button>
+          <button onclick="adicionarValor('5')">5</button>
+          <button onclick="adicionarValor('6')">6</button>
+          <button onclick="adicionarValor('7')">7</button>
+          <button onclick="adicionarValor('8')">8</button>
+          <button onclick="adicionarValor('9')">9</button>
+          <button onclick="adicionarValor('0')">0</button>
+          
+        </div>
       </div>
     </div>
+    <!-- Referencia ao Javascript -->
     <script src="calculadora.js"></script>
   </body>
 </html>

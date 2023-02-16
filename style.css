@@ -1,0 +1,65 @@
+/* estilo da calculadora */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  height: 100vh;
+  width: 100%;
+}
+.imagem {
+  width: 450px;
+  margin-right: 100px;
+}
+.calculadora {
+  border-radius: 25px;
+  background: rgb(94, 94, 94);
+
+  padding: 20px;
+  width: 250px;
+  height: 320px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+/* estilo dos botoes */
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  width: 35px;
+
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  background-color: #0be0c3;
+  box-shadow: 0 6px #bebdbd;
+}
+
+div.operadores button {
+  background-color: #0be0c3;
+  box-shadow: 0 6px #bebdbd;
+}
+
+div.numeros button {
+  color: #155c52;
+  background-color: #fff;
+  box-shadow: 0 6px #bebdbd;
+}
+
+button:hover {
+  filter: brightness(90%)
+}
+
+button:active {
+  transform: translateY(4px);
+}
